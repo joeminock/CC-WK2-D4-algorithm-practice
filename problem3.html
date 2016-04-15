@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Problem 3</title>
+</head>
+<body>
+
+	<script>
+//		Write a function which takes an array of numbers and returns the average of that array.
+//		[2, 4, 6] - > 4
+//		[0, 0, 0, 10] -> 2.5
+		
+		function average(arr) {
+			var total = 0;                         //Value of total from arr[i] iterations
+			for (var i = 0; i < arr.length; i++) { //Iterator
+				total += arr[i];                   //Adds arr[i] to total
+			}
+			return (total / arr.length);      //Returns the sum of dividing total by amount of numbers in array.                   
+		}
+		
+
+		console.log(average([2,4,6]) == 4);
+		console.log(average([5,5,5]) == 5);
+		console.log(average([0, 0, 0, 10]) == 2.5);
+		console.log(average([25, 50, 100, 200]) == 93.75);
+		
+	</script>
+	
+</body>
+</html>
+

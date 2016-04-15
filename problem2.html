@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Problem 2</title>
+</head>
+
+<body>
+
+	<script>
+		//		Write a function which takes an array of numbers and returns the maximum of that array.
+		//		[3, 4, 5] - > 5
+		//		[-10, 2] - > 2
+
+
+		function maximum(arr) {
+
+			var maxSoFar = arr[0];
+			for (var i = 1; i < arr.length; i++) {
+				if (arr[i] > maxSoFar) {
+					maxSoFar = arr[i];
+				}
+			}
+			return maxSoFar;
+		}
+
+		console.log(maximum([3, 4, 5]) == 5);
+		console.log(maximum([-10, 2]) == 2);
+		console.log(maximum([0, 1, 2, -3]) == 2);
+		console.log(maximum([-1, 0, 1]) == 1);
+	</script>
+
+</body>
+
+</html>

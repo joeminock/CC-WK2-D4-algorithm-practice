@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Problem 4</title>
+</head>
+<body>
+	<script>
+//	Write a function which takes an array of integers > 0 and returns  the first integer 	 which does not appear in that array.
+//	[1,2,5] -> 3
+//	[1,2,3,4,5] -> 6
+		
+//	Array   |1|2|3|4|5|
+//	Index   |0|1|2|3|4|5
+//	arr[i]+1|2|3|4|5|6
+//	arr[i+1]|2|3|4|5
+		
+	var outcome;
+		
+	function missing(arr) {
+		for(var index = 0; index < arr.length; index++) {
+			if((arr[index] + 1) != arr[index+1]) {
+				return arr[index]+1;
+			}
+			
+		}
+		
+	}
+		
+	console.log(missing([1,2,5]) == 3);
+	console.log(missing([1,2,3,4,5]) == 6);
+	console.log(missing([3,4]) == 5);
+	
+	</script>
+	
+</body>
+</html>
